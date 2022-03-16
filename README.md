@@ -1,3 +1,12 @@
 # Hate Web Application
+This web application project is based on creating a commerically available hate speech detection tool using machine learning feature techniques to check data for offensive content. The models and features are used help create a precise, accurate, and helpful solution for online hate-speech detection.
 
-Based on designing and implementing Sci-kit Models to create an online file/text testing site where users can check between hate speech and offensive langauge.
+## Usage
+- python manage.py runserver 
+- npm run start on ./frontend
+- HTML form to parse in data to backend
+- Use model to classify data as hateful, offensive, or neither
+
+## API
+- React runs on localhost:300
+- API calls made on localhost:8000
