@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
 import {useState, useEffect} from 'react'
+import { Navbar } from './components/Nav/Navbar'
+import {Tackle} from './components/Tackle/Tackle'
 
 function App() {
 
@@ -27,14 +29,10 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {data} 
-          Hasan
-        </p>
+      <Navbar />
+       
+        <Tackle />
         
-      </header>
     </div>
   );
 }
