@@ -1,5 +1,7 @@
 import re
 from django.shortcuts import render
+
+from api.apps import runModel
 from .serializer import TextSerializer
 from rest_framework import generics
 from rest_framework.generics import CreateAPIView
@@ -19,9 +21,7 @@ class apiView(CreateAPIView):
     
     @csrf_exempt 
     def post(self, request):
-
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
-        print(body['data'])
-
-        return Response('World ' + body['data'])
+        result = runModel(body['data'])
+        return Response(result)
