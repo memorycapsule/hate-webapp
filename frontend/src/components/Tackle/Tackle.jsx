@@ -1,7 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from 'axios'
+
 import * as S from "./Tackle.styles"
 
 export const Tackle = () => {
+
+  const [inputData, setInputData] = useState('')
+  const [responseData, setResponseData] = useState('')
+
+
+
+
+  const onSubmit = () => {
+    axios.post('http://localhost:8000/api', {"data": inputData})
+    .then( (result) => {
+      // handle success
+      console.log(result.data)
+      setResponseData(result.data)
+    })
+    .catch( (error) => {
+      // handle error
+      console.log(error);
+    })
+  }
+
+
+
   return (<>
     <S.ParentFlex>
     <S.ContentBox>
@@ -27,12 +51,16 @@ Solidarity aims to solve this problem by implementing a machine-learning based a
         <S.Title>
             Try it out!
         </S.Title>
-        <S.Form>
+        <S.Form onSubmit={(e)=>{ e.preventDefault(); onSubmit()}} >
         <S.label>Try this hassle-free demo of our application.        
         </S.label>
-        <S.input type="text" id="fname" name="fname"></S.input>
+        <S.input onChange={(data) => setInputData(data.target.value)} type="text" id="fname" name="fname"></S.input>
         <S.response>
-            
+    
+            {responseData === 0 ? 'Hate speech' : null}
+            {responseData === 1 ? 'Offensive' : null}
+            {responseData === 2 ? 'Neither' : null}
+
         </S.response>
         <S.disclaimer>Note: Please do not enter any personal information.</S.disclaimer>
 

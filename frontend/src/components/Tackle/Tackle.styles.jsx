@@ -8,8 +8,46 @@ export const Title = styled.a`
 `
 
 export const Button = styled.button`
-    color: Black;
-    background-color: #fcca40;
+
+
+
+  appearance: none;
+  background-color: #fcca40;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  line-height: normal;
+  margin: 0;
+  min-height: 16px;
+  min-width: 32px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+
+
+:disabled {
+  pointer-events: none;
+}
+
+:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 `
 
 export const ParentFlex = styled.div`
@@ -46,7 +84,7 @@ width: 400px;
 `
 export const response = styled.div`
 height: 30px;
-width: 405px;
+width: 100%;
 background-color: #fcca40;
 `
 
