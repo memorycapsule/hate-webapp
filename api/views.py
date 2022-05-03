@@ -1,5 +1,5 @@
 import re
-from api.apps import runLR, runNB, runRF, runSVC
+from api.apps import runLR, runNB, runRF, runSVC, getTweets, runMLP, runSGD
 from .serializer import TextSerializer
 from rest_framework import generics
 from rest_framework.generics import CreateAPIView
@@ -14,7 +14,9 @@ class apiView(CreateAPIView):
     
     @csrf_exempt 
     def get(self, request):
-        return Response('Hello')
+        result = getTweets()
+        print(result)
+        return Response(result)
     
     @csrf_exempt 
     def post(self, request):
@@ -32,12 +34,12 @@ class apiView(CreateAPIView):
             elif model == "Random Forest":
                 result = runRF(data)
             elif model == "MLP":
-                pass
+                result = runMLP(data)
             elif model == "SGDClassifier":
-                pass
+                result = runSGD(data)
             else:
-                # result = runSVC(data)
-                pass
+                #run default Linear SVC
+                result = runSVC(data)
         return Response(result)
     
 

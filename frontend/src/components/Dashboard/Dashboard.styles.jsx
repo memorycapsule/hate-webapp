@@ -115,3 +115,10 @@ justify-content: flex-end;
 padding-right: 3rem;
 
 `;
+export const empty = styled.div`
+display: flex;
+flex: 0.2;
+justify-content: flex-end;
+padding-right: 3rem;
+
+`;

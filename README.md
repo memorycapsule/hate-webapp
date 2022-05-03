@@ -8,5 +8,7 @@ This web application project is based on creating a commerically available hate 
 - Use model to classify data as hateful, offensive, or neither
 
 ## API
-- React runs on localhost:300
+- React runs on localhost:3000
 - API calls made on localhost:8000
+
+# Dependencies
