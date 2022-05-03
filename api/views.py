@@ -1,5 +1,5 @@
 import re
-from api.apps import runLR, runNB, runRF, runSVC, getTweets, runMLP, runSGD
+from api.apps import runLR, runNB, runRF, runSVC, getTweets, runMLP, runSGD, updateModels
 from .serializer import TextSerializer
 from rest_framework import generics
 from rest_framework.generics import CreateAPIView
