@@ -50,16 +50,22 @@ export const Button = styled.button`
 }
 `
 
-export const ParentFlex = styled.div`
+export const PageParent = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+`;
+
+export const HalfPageBox = styled.div`
     display: flex;
+    flex: 0.5;
     justify-content: center;
     color: white;
     width: 100vw;
-    height: 40%;
 `
 export const textBody = styled.p`
-    text-align: left;
-    width:70%
+    text-align: center;
+    width:70%;
 `
 
 export const ContentBox = styled.div`
@@ -78,14 +84,19 @@ export const label = styled.label`
 display: flex;
 
 `
-export const input = styled.input`
+export const input = styled.textarea`
 height: 200px;
 width: 400px;
+resize:none;
+outline: none;
+
+
 `
 export const response = styled.div`
 height: 30px;
 width: 100%;
 background-color: #fcca40;
+color: black;
 `
 
 export const disclaimer = styled.p`

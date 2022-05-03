@@ -2,17 +2,14 @@ import React from "react";
 import * as S from "./Navbar.styles"
 
 export const Navbar = () => {
-  // <S.title>HELLO</S.title>
-  return (<>
+  return (
     <S.nav>
-      <div><S.Title>Solidarity</S.Title>
-        </div>
-        <div>
-      <S.sub>How it works</S.sub>
-      <S.sub>Why</S.sub>
-      <S.sub>Implement</S.sub>
-      </div>
+      <S.linked to="/"> Solidarity  </S.linked>
+      <S.linked to="/How"> How  </S.linked>
+      <S.linked to="/Why"> Use Case </S.linked>
+      <S.linked to="/Dashboard"> Comments </S.linked>
+  
     </S.nav>
-  </>);
+  );
 };
 
