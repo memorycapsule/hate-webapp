@@ -14,7 +14,8 @@ This web application project is based on creating a commerically available hate 
 The models are run in \api\apps.py
 
 Please note you need pandas version 1.3 and Python 3.6.
-You many need to install the following:
+You may need to do the following:
+npm i
 python -m pip install Django
 pip install dill
 pip install numpy
