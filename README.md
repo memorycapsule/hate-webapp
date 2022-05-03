@@ -3,7 +3,8 @@ This web application project is based on creating a commerically available hate 
 
 ## Usage
 - in home directory : python .\manage.py runserver 
-- in on frontend directory: npm run start 
+- in the frontend directory : npm i
+- in the frontend directory: npm run start 
 - Use model to classify data as hateful
 
 ## API
